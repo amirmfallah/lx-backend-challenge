@@ -20,9 +20,8 @@ const logger = (req, res, next) => {
   next();
 };
 
-router.get("/", logger, (req, res) => {
-  res.sendStatus(200);
-});
+router.get("/reverse-words", logger, handlers.ReverseWordsHandler);
+router.get("/sort-words", logger, handlers.SortWordsHandler);
 
 app.use("/", router);
 module.exports = app;
