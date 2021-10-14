@@ -1,0 +1,28 @@
+service: lx-backend-challenge
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  versionFunctions: false
+  region: ap-southeast-2
+
+functions:
+  hello:
+    handler: handler/main.main
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors:
+            origin: "*"
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - If-Match
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false
