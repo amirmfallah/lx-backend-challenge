@@ -22,6 +22,15 @@ const logger = (req, res, next) => {
 
 router.get("/reverse-words", logger, handlers.ReverseWordsHandler);
 router.get("/sort-words", logger, handlers.SortWordsHandler);
-
+router.get(
+  "/calculate-after-tax-income",
+  logger,
+  handlers.CalculateAfterTaxIncomeHandler
+);
+router.get(
+  "/calculate-pre-tax-income-from-take-home",
+  logger,
+  handlers.CalculatePreTaxIncomeHandler
+);
 app.use("/", router);
 module.exports = app;

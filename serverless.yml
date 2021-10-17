@@ -9,7 +9,7 @@ provider:
   region: ap-southeast-2
 
 functions:
-  hello:
+  handler:
     handler: handler/main.main
     events:
       - http:
