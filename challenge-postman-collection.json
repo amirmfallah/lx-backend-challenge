@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "29f38d60-5683-4837-b4d7-4d0a49c8db70",
+		"name": "LX API challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Reverse Words",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/sort-words?sentence=The sentance \"Hello World!\" is often used in programming examples?",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sort-words"
+					],
+					"query": [
+						{
+							"key": "sentence",
+							"value": "The sentance \"Hello World!\" is often used in programming examples?"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Words",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/reverse-words?sentence=LX's head office is located in Sydney, Australia.",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reverse-words"
+					],
+					"query": [
+						{
+							"key": "sentence",
+							"value": "LX's head office is located in Sydney, Australia."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate After Tax Income",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/calculate-after-tax-income?annualBaseSalary=25000",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"calculate-after-tax-income"
+					],
+					"query": [
+						{
+							"key": "annualBaseSalary",
+							"value": "25000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Pre Tax Income",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/calculate-pre-tax-income-from-take-home?postTaxSalary=23342.5",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"calculate-pre-tax-income-from-take-home"
+					],
+					"query": [
+						{
+							"key": "postTaxSalary",
+							"value": "23342.5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://5z747owm8e.execute-api.ap-southeast-2.amazonaws.com/dev"
+		}
+	]
+}

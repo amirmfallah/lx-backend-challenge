@@ -4,7 +4,7 @@
   "description": "API backend challenge",
   "main": "local.handler.js",
   "scripts": {
-    "test": "nodemon local.handler.js"
+    "test": "node local.handler.js"
   },
   "repository": {
     "type": "git",

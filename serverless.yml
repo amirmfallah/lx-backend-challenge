@@ -13,16 +13,8 @@ functions:
     handler: handler/main.main
     events:
       - http:
-          path: /
+          path: /{proxy+}
           method: ANY
           cors:
             origin: "*"
-            headers:
-              - Content-Type
-              - X-Amz-Date
-              - Authorization
-              - If-Match
-              - X-Api-Key
-              - X-Amz-Security-Token
-              - X-Amz-User-Agent
             allowCredentials: false
