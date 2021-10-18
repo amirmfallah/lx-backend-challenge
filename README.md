@@ -4,6 +4,8 @@ This API challenge, based on the [Swagger Schema](http://tech-challenge.lx-cloud
 
 A [Postman collection](challenge-postman-collection.json) is available to test API endpoints. The `base_url` variable need to be set to the endpoint url generated after deploying to a AWS lambda function.
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/193bda61d113bf8822df?action=collection%2Fimport)
+
 ## Requirements
 
 The setup of the environment is needed to localy run or deploy to the AWS services.
