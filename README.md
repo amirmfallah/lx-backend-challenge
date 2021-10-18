@@ -22,7 +22,7 @@ Install dependencies
 
 The application can be executed localy using following command, a web server will be created on `localhost` port `3000`.
 
-    npm test
+    npm run
 
 ## Configurations
 
@@ -70,3 +70,18 @@ const taxBrackets = [
 To deploy the application please run following command in the projects root directory.
 
     serverless deploy
+
+## Testing
+
+To run testing use below command:
+
+    npm test
+
+### Coverage report
+
+| File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s |
+| --------------- | ------- | -------- | ------- | ------- | ----------------- |
+| All files       | 97.05   | 96       | 100     | 97.01   |
+| configs.js      | 100     | 100      | 100     | 100     |
+| decimalUtils.js | 100     | 100      | 100     | 100     |
+| utils.js        | 96.49   | 96       | 100     | 96.42   | 71,112            |

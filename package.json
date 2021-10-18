@@ -4,7 +4,8 @@
   "description": "API backend challenge",
   "main": "local.handler.js",
   "scripts": {
-    "test": "node local.handler.js"
+    "start": "node local.handler.js",
+    "test": "nyc mocha"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,10 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "nodemon": "^2.0.13",
+    "nyc": "^15.1.0",
     "source-map-support": "^0.5.20"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.3"
   }
 }
