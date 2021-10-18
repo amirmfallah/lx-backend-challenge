@@ -55,7 +55,7 @@ async function CalculatePreTaxIncomeHandler(req, res) {
     res.send(400).json(errors.HttpError400);
   }
 
-  let income = utils.CalculateSalary(takeHome);
+  let income = utils.CalculateSalaryBeforeTax(takeHome);
   if (isNaN(income)) {
     res.send(500).json(errors.HttpError500);
   }
@@ -68,7 +68,7 @@ async function CalculatePreTaxIncomeHandler(req, res) {
     baseSalary: income,
     superannuation: utils.CalculateSuperannuation(income),
     taxes: taxes,
-    afterTaxIncome: income - taxes.total,
+    postTaxIncome: income - taxes.total,
   });
 }
 
